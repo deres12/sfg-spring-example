@@ -20,14 +20,17 @@ public class SfgSpringExampleApplication {
         System.out.println(example);
 
         System.out.println("--------- Property");
+        //CLASS NAME CONTROLLER BUT LOWER CASE FIRST CHARACTER
         PropertyInjectedController propertyInjectedController = (PropertyInjectedController) ctx.getBean("propertyInjectedController");
         System.out.println(propertyInjectedController.getGreeting());
 
         System.out.println("--------- Setter");
+        //CLASS NAME CONTROLLER BUT LOWER CASE FIRST CHARACTER
         SetterInjectedController setterInjectedController = (SetterInjectedController) ctx.getBean("setterInjectedController");
         System.out.println(setterInjectedController.getGreeting());
 
         System.out.println("--------- Constructor");
+        //CLASS NAME CONTROLLER BUT LOWER CASE FIRST CHARACTER
         ConstructorInjectedController constructorInjectedController = (ConstructorInjectedController) ctx.getBean("constructorInjectedController");
         System.out.println(constructorInjectedController.getGreeting());
 

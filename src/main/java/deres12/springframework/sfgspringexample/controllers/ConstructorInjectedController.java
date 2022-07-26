@@ -1,14 +1,16 @@
 package deres12.springframework.sfgspringexample.controllers;
 
-import deres12.springframework.sfgspringexample.services.GreetingServiceImplNoAnnotation;
+import deres12.springframework.sfgspringexample.services.GreetingService;
+import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.stereotype.Controller;
 
 @Controller
 public class ConstructorInjectedController {
 
-    private final GreetingServiceImplNoAnnotation greetingService;
+    private final GreetingService greetingService;
 
-    public ConstructorInjectedController (GreetingServiceImplNoAnnotation greetingService) {
+    //Qualifier CLASS NAME BUT LOWER CASE FIRST CHARACTER
+    public ConstructorInjectedController (@Qualifier("constructorGreetingServiceImpl") GreetingService greetingService) {
         this.greetingService = greetingService;
     }
 
