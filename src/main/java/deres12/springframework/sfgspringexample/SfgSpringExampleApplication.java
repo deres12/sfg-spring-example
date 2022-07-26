@@ -16,8 +16,9 @@ public class SfgSpringExampleApplication {
         ApplicationContext ctx = SpringApplication.run(SfgSpringExampleApplication.class, args);
 
         MyController myController = (MyController) ctx.getBean("myController");
-        String example = myController.sayHello();
-        System.out.println(example);
+
+        System.out.println("--------- Primary Bean");
+        System.out.println(myController.sayHello());
 
         System.out.println("--------- Property");
         //CLASS NAME CONTROLLER BUT LOWER CASE FIRST CHARACTER
