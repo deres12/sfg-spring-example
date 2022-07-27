@@ -26,12 +26,12 @@ public class LifeCycleDemoBean implements InitializingBean, DisposableBean, Bean
     }
 
     @Override
-    public void destroy(){
+    public void destroy() {
         System.out.println("### destroy: ");
     }
 
     @Override
-    public void afterPropertiesSet()  {
+    public void afterPropertiesSet() {
         System.out.println("### afterPropertiesSet: ");
     }
 
