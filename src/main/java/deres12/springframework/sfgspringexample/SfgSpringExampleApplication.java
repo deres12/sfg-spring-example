@@ -1,9 +1,6 @@
 package deres12.springframework.sfgspringexample;
 
-import deres12.springframework.sfgspringexample.controllers.ConstructorInjectedController;
-import deres12.springframework.sfgspringexample.controllers.MyController;
-import deres12.springframework.sfgspringexample.controllers.PropertyInjectedController;
-import deres12.springframework.sfgspringexample.controllers.SetterInjectedController;
+import deres12.springframework.sfgspringexample.controllers.*;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.ApplicationContext;
@@ -15,9 +12,12 @@ public class SfgSpringExampleApplication {
 
         ApplicationContext ctx = SpringApplication.run(SfgSpringExampleApplication.class, args);
 
-        MyController myController = (MyController) ctx.getBean("myController");
+        System.out.println("--------- I18nController");
+        I18nController i18nController = (I18nController) ctx.getBean("i18nController");
+        System.out.println(i18nController.sayHello());
 
         System.out.println("--------- Primary Bean");
+        MyController myController = (MyController) ctx.getBean("myController");
         System.out.println(myController.sayHello());
 
         System.out.println("--------- Property");
