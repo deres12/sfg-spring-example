@@ -10,7 +10,7 @@ public class PropertyInjectedController {
 
     @Autowired
     @Qualifier("propertyGreetingServiceImpl")//CLASS NAME BUT LOWER CASE FIRST CHARACTER
-    public GreetingService greetingService;
+    private GreetingService greetingService;
 
     public String getGreeting(){
         return greetingService.sayGreeting();
